@@ -1,4 +1,4 @@
-# Mongodb stitch api client for NODEJS
+# Mongodb realm api client for NODEJS
 
 A mongdb realm api client for nodejs.
 
