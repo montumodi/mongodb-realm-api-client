@@ -1,19 +1,53 @@
 {
   "name": "mongodb-realm-api-client",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "A mongodb realm api client for nodejs.",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cover": "istanbul cover ./node_modules/@hapi/lab/bin/lab ./test --leaks",
+    "pretest": "eslint --cache \"src/**/*.js\" \"test/**/*.js\"",
+    "coveralls": "cat ./coverage/lcov.info | node ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "test": "./node_modules/@hapi/lab/bin/lab ./test/ -v -S --assert @hapi/code --threshold 100 -p 1",
+    "lint": "./node_modules/.bin/eslint ./src --fix",
+    "travis": "npm run test",
+    "premajor": "npm run test",
+    "major": "npm version major -m \"published to npm as v%s\" && git push --follow-tags && npm publish",
+    "preminor": "npm run test",
+    "minor": "npm version minor -m \"published to npm as v%s\" && git push --follow-tags && npm publish",
+    "prepatch": "npm run test",
+    "patch": "npm version patch -m \"published to npm as v%s\" && git push --follow-tags && npm publish"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/montumodi/mongodb-realm-api-client.git"
   },
+  "keywords": [
+    "mongodb",
+    "realm",
+    "stitch",
+    "atlas",
+    "trigger",
+    "mongo",
+    "api",
+    "client",
+    "driver",
+    "nodejs",
+    "node"
+  ],
   "author": "Ashish Modi",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/montumodi/mongodb-realm-api-client/issues"
   },
-  "homepage": "https://github.com/montumodi/mongodb-realm-api-client#readme"
+  "homepage": "https://github.com/montumodi/mongodb-realm-api-client#readme",
+  "devDependencies": {
+    "@hapi/code": "^8.0.1",
+    "@hapi/lab": "^22.0.4",
+    "coveralls": "^3.1.0",
+    "eslint": "^7.3.1",
+    "istanbul": "^0.4.5"
+  },
+  "dependencies": {
+    "mongodb-stitch-api-client": "^1.14.0"
+  }
 }
