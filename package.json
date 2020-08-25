@@ -44,10 +44,10 @@
     "@hapi/code": "^8.0.2",
     "@hapi/lab": "^23.0.0",
     "coveralls": "^3.1.0",
-    "eslint": "^7.5.0",
+    "eslint": "^7.7.0",
     "istanbul": "^0.4.5"
   },
   "dependencies": {
-    "mongodb-stitch-api-client": "^1.17.0"
+    "mongodb-stitch-api-client": "^1.18.0"
   }
 }
