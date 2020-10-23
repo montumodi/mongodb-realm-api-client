@@ -42,12 +42,12 @@
   "homepage": "https://github.com/montumodi/mongodb-realm-api-client#readme",
   "devDependencies": {
     "@hapi/code": "^8.0.2",
-    "@hapi/lab": "^23.0.0",
+    "@hapi/lab": "^24.1.0",
     "coveralls": "^3.1.0",
-    "eslint": "^7.8.1",
+    "eslint": "^7.11.0",
     "istanbul": "^0.4.5"
   },
   "dependencies": {
-    "mongodb-stitch-api-client": "^1.19.0"
+    "mongodb-stitch-api-client": "^1.22.0"
   }
 }
