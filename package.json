@@ -48,6 +48,6 @@
     "istanbul": "^0.4.5"
   },
   "dependencies": {
-    "mongodb-stitch-api-client": "^1.23.0"
+    "mongodb-stitch-api-client": "^1.31.0"
   }
 }
