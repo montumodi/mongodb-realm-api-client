@@ -4,12 +4,9 @@
   "description": "A mongodb realm api client for nodejs.",
   "main": "src/index.js",
   "scripts": {
-    "cover": "istanbul cover ./node_modules/@hapi/lab/bin/lab ./test --leaks",
     "pretest": "eslint --cache \"src/**/*.js\" \"test/**/*.js\"",
-    "coveralls": "cat ./coverage/lcov.info | node ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "test": "./node_modules/@hapi/lab/bin/lab ./test/ -v -S --assert @hapi/code --threshold 100 -p 1",
     "lint": "./node_modules/.bin/eslint ./src --fix",
-    "travis": "npm run test",
     "premajor": "npm run test",
     "major": "npm version major -m \"published to npm as v%s\" && git push --follow-tags && npm publish",
     "preminor": "npm run test",
@@ -41,13 +38,11 @@
   },
   "homepage": "https://github.com/montumodi/mongodb-realm-api-client#readme",
   "devDependencies": {
-    "@hapi/code": "^8.0.3",
-    "@hapi/lab": "^24.3.2",
-    "coveralls": "^3.1.1",
-    "eslint": "^7.32.0",
-    "istanbul": "^0.4.5"
+    "@hapi/code": "^9.0.0",
+    "@hapi/lab": "^25.0.1",
+    "eslint": "^8.15.0"
   },
   "dependencies": {
-    "mongodb-stitch-api-client": "^1.35.0"
+    "mongodb-stitch-api-client": "^1.40.0"
   }
 }
