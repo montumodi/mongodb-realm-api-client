@@ -43,6 +43,6 @@
     "eslint": "^8.15.0"
   },
   "dependencies": {
-    "mongodb-stitch-api-client": "^1.40.0"
+    "mongodb-stitch-api-client": "^1.43.0"
   }
 }
